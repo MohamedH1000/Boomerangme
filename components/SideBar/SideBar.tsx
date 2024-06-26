@@ -13,8 +13,16 @@ const SideBar = () => {
   const activeManagers = pathname === "/managers";
   const activeSettings = pathname === "/settings";
   return (
-    <div className="fixed top-[64px] left-0 min-h-screen w-[56px] bg-[#EAEAED]">
-      <div className="flex justify-start gap-2 flex-col items-center mt-20">
+    <div
+      className="fixed md:top-[64px] md:left-0 
+    md:min-h-screen md:w-[56px] bg-[#EAEAED] 
+    max-md:bottom-0 max-md:w-full"
+    >
+      <div
+        className="flex md:justify-start gap-2 
+      md:flex-col md:items-center md:mt-20 max-md:flex 
+      max-md:justify-center max-md:items-center max-md:p-2"
+      >
         <Link href={"/"}>
           <div
             className={`

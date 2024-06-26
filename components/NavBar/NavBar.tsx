@@ -20,7 +20,7 @@ const NavBar = () => {
             className="ml-4 mt-5"
           />
         </Link>
-        <div className="flex justify-center">
+        <div className="flex justify-center max-md:hidden">
           <div
             className="p-2 flex justify-between text-white
           hover:bg-[#2E2E2E] duration-500
@@ -51,7 +51,7 @@ const NavBar = () => {
       </div>
       <div
         className="mr-5 flex justify-center 
-      w-[250px] items-center h-[100%]"
+      w-[250px] items-center h-[100%] max-md:hidden"
       >
         <div
           className="hover:bg-[#2E2E2E] duration-300 
@@ -113,6 +113,15 @@ const NavBar = () => {
             <path d="m19.842 17.4144-4.1484-1.8852c1.404-1.098 2.3064-2.808 2.3064-4.7292 0-3.3132-2.6856-6-6-6-3.3132 0-6 2.6868-6 6 0 1.9212.9024 3.6312 2.3076 4.7292l-4.1484 1.8852c-.3948.18-.7416.4404-1.02.7608-1.2228-1.7508-1.9392-3.8796-1.9392-6.1752 0-5.964 4.836-10.8 10.8-10.8 5.9652 0 10.8 4.836 10.8 10.8 0 2.2956-.7164 4.4244-1.938 6.1752-.2784-.3204-.6252-.5808-1.02-.7608zm-12.642-6.6144c0-2.6508 2.1492-4.8 4.8-4.8s4.8 2.1492 4.8 4.8-2.1492 4.8-4.8 4.8-4.8-2.1492-4.8-4.8zm4.8 12c-3.2244 0-6.1176-1.4124-8.0976-3.6528.1848-.2772.444-.5004.7536-.6396l4.8984-2.2272c.7464.3336 1.5744.5196 2.4456.5196s1.6992-.186 2.4468-.5196l4.8984 2.2272c.3084.1392.5676.3624.7524.6396-1.9788 2.2404-4.8732 3.6528-8.0976 3.6528zm0-22.8c-6.6276 0-12 5.3724-12 12s5.3724 12 12 12 12-5.3724 12-12-5.3724-12-12-12z"></path>
           </svg>
         </div>
+      </div>
+      <div className="flex justify-center items-center md:hidden max-md:static mr-4">
+        <Image
+          src={"/icons/hamburger.svg"}
+          alt="hamburger"
+          height={36}
+          width={36}
+          className="invert-0"
+        />
       </div>
     </nav>
   );
