@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import MobileNav from "../MobileNav/MobileNav";
 
 const NavBar = () => {
   const myuser = { id: 1, username: "mohamed" };
@@ -114,15 +115,7 @@ const NavBar = () => {
           </svg>
         </div>
       </div>
-      <div className="flex justify-center items-center md:hidden max-md:static mr-4">
-        <Image
-          src={"/icons/hamburger.svg"}
-          alt="hamburger"
-          height={36}
-          width={36}
-          className="invert-0"
-        />
-      </div>
+      <MobileNav />
     </nav>
   );
 };

@@ -86,15 +86,13 @@ const AuthForm = ({ type }: { type: string }) => {
           href="/"
           className="cursor-pointer flex items-center justify-between "
         >
-          {/* <Image
+          <Image
             src="/assets/logotype-light.svg"
-            width={34}
-            height={34}
+            width={200}
+            height={200}
             alt="Horizon logo"
-          /> */}
-          <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-            Walaa System
-          </h1>
+            className="invert"
+          />
         </Link>
 
         <div className="flex flex-col gap-1 md:gap-3">
