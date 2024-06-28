@@ -39,7 +39,7 @@ const ProfileDialog = ({
           openProfile
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-        } absolute w-[270px]  bg-[#2E2E2E] top-[64px] left-[-206.5px] text-white duration-300  flex flex-col justify-between items-start`}
+        } absolute w-[270px]  bg-[#2E2E2E] top-[64px] -right-5 text-white duration-300  flex flex-col justify-between items-start`}
       >
         <div className="flex justify-center gap-3 pl-4 items-center m-4">
           <Image

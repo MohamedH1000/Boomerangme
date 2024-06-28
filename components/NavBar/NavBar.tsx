@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import MobileNav from "../MobileNav/MobileNav";
-import NavLinks from "../NavLinks/NavLinks";
+import React from "react";
+import MobileNav from "./MobileNav";
+import NavLinks from "./NavLinks";
 
 const NavBar = () => {
   return (
