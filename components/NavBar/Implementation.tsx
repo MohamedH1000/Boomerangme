@@ -12,9 +12,11 @@ const Implementation = ({
 }: Props) => {
   return (
     <div
-      className="p-2 flex justify-between text-white
-    hover:bg-[#2E2E2E] duration-500 cursor-pointer
-    w-[180px] text-[14px] items-center relative"
+      className={`${
+        openImplement ? "bg-[#2E2E2E]" : "hover:bg-[#2E2E2E]"
+      } p-2 flex justify-between text-white
+     duration-500 cursor-pointer
+    w-[180px] text-[14px] items-center relative p-3`}
       onClick={() => {
         setOpenImplement((prev: any) => !prev);
         setOpenHi(false);
@@ -27,18 +29,19 @@ const Implementation = ({
         </svg>
       </div>
       <div
-        className="p-2 flex justify-between text-white
-hover:bg-[#2E2E2E] duration-500
-cursor-pointer w-[180px] text-[14px] items-center"
+        className={`${
+          openImplement
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        } absolute w-[272px] top-[64px] bg-[#2E2E2E] left-0 text-white duration-300 flex flex-col justify-between items-start h-[121px] p-5`}
       >
-        <div
-          className={`${
-            openImplement
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          } absolute w-[270px]  bg-[#2E2E2E] top-[64px] left-0 text-white duration-300  flex flex-col justify-between items-start`}
-        >
-          Implementation
+        <div className="  w-full flex flex-col justify-center items-start">
+          <p className="">Stage:</p>
+          <p className="text-[red] font-bold">Start</p>
+        </div>
+        <div>
+          <p>Recommendation:</p>
+          <span className="font-bold">Activate your loyalty card</span>
         </div>
       </div>
     </div>

@@ -9,9 +9,11 @@ const HiDialog = ({ openHi, setOpenHi, setOpenImplement }: Props) => {
   const myuser = { id: 1, username: "mohamed" };
   return (
     <div
-      className="p-2 flex justify-between text-white
-hover:bg-[#2E2E2E] duration-500
-cursor-pointer w-[180px] text-[14px] items-center relative"
+      className={`${
+        openHi ? "bg-[#2E2E2E]" : "hover:bg-[#2E2E2E]"
+      } p-2 flex justify-between text-white
+        duration-500 cursor-pointer w-[180px] text-[14px] 
+        items-center relative`}
       onClick={() => {
         setOpenHi((prev: any) => !prev);
         setOpenImplement(false);
