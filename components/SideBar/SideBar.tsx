@@ -21,7 +21,7 @@ const SideBar = () => {
       <div
         className="flex md:justify-start gap-2 
       md:flex-col md:items-center md:mt-20 max-md:flex 
-      max-md:justify-start max-md:items-center max-md:p-2"
+      max-md:justify-start max-md:items-center max-md:p-2 "
       >
         <Link href={"/"}>
           <div

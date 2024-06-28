@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { Dispatch, SetStateAction } from "react";
+import { useRouter } from "next/navigation";
 
 interface Props {
   setOpenLang: Dispatch<SetStateAction<boolean>>;
@@ -13,6 +16,14 @@ const ProfileDialog = ({
   openProfile,
   setOpenProfile,
 }: Props) => {
+  const router = useRouter();
+  const logout = () => {
+    try {
+      router.push("/sign-in");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div
       className={`${
@@ -41,66 +52,79 @@ const ProfileDialog = ({
             : "opacity-0 pointer-events-none"
         } absolute w-[270px]  bg-[#2E2E2E] top-[64px] -right-5 text-white duration-300  flex flex-col justify-between items-start`}
       >
-        <div className="flex justify-center gap-3 pl-4 items-center m-4">
-          <Image
-            src={"/assets/account.svg"}
-            alt="account"
-            width={24}
-            height={24}
-            className="invert"
-          />
-          <div className="text-[14px]">My Profile</div>
-        </div>
-        <hr className="border-b-1 border-white w-full" />
-        <div className="flex justify-center gap-3 pl-4 items-start m-4">
-          <Image
-            src={"/assets/createcard.svg"}
-            alt="create card"
-            width={24}
-            height={24}
-            className="invert"
-          />
-          <div className="flex flex-col gap-3">
-            <div className="text-[14px]">Create Card</div>
-            <div className="text-[14px]">Bar</div>
-            <div className="text-[14px]">ATV Rental</div>
+        <Link href={"/settings/personal"}>
+          <div className="flex justify-center gap-3 pl-4 items-center m-4">
+            <Image
+              src={"/assets/account.svg"}
+              alt="account"
+              width={24}
+              height={24}
+              className="invert"
+            />
+            <div className="text-[14px]">My Profile</div>
           </div>
-        </div>
+        </Link>
         <hr className="border-b-1 border-white w-full" />
-        <div className="flex justify-center gap-3 pl-4 items-center m-4">
-          <Image
-            src={"/assets/statistics.svg"}
-            alt="statistics"
-            width={24}
-            height={24}
-            className="invert"
-          />
-          <div className="text-[14px]">Statistics</div>
-        </div>
+        <Link href={"/cards/create"}>
+          <div className="flex justify-center gap-3 pl-4 items-start m-4">
+            <Image
+              src={"/assets/createcard.svg"}
+              alt="create card"
+              width={24}
+              height={24}
+              className="invert"
+            />
+            <div className="flex flex-col gap-3">
+              <div className="text-[14px]">Create Card</div>
+              <div className="text-[14px]">Bar</div>
+              <div className="text-[14px]">ATV Rental</div>
+            </div>
+          </div>
+        </Link>
         <hr className="border-b-1 border-white w-full" />
-        <div className="flex justify-center gap-3 pl-4 items-center m-4">
-          <Image
-            src={"/assets/settings.svg"}
-            alt="settings"
-            width={24}
-            height={24}
-            className="invert"
-          />
-          <div className="text-[14px]">Settings</div>
-        </div>
+        <Link href={"/"}>
+          <div className="flex justify-center gap-3 pl-4 items-center m-4">
+            <Image
+              src={"/assets/statistics.svg"}
+              alt="statistics"
+              width={24}
+              height={24}
+              className="invert"
+            />
+            <div className="text-[14px]">Statistics</div>
+          </div>
+        </Link>
         <hr className="border-b-1 border-white w-full" />
-        <div className="flex justify-center gap-3 pl-4 items-center m-4">
-          <Image
-            src={"/assets/scanner.svg"}
-            alt="scanner"
-            width={24}
-            height={24}
-            className="invert"
-          />
-          <div className="text-[14px]">Scanner App</div>
-        </div>
+        <Link href={"/settings"}>
+          <div className="flex justify-center gap-3 pl-4 items-center m-4">
+            <Image
+              src={"/assets/settings.svg"}
+              alt="settings"
+              width={24}
+              height={24}
+              className="invert"
+            />
+            <div className="text-[14px]">Settings</div>
+          </div>
+        </Link>
         <hr className="border-b-1 border-white w-full" />
-        <div className="flex justify-center gap-3 pl-4 items-center m-4">
+        <Link href={"/scanner-app"} target="_blank">
+          <div className="flex justify-center gap-3 pl-4 items-center m-4">
+            <Image
+              src={"/assets/scanner.svg"}
+              alt="scanner"
+              width={24}
+              height={24}
+              className="invert"
+            />
+            <div className="text-[14px]">Scanner App</div>
+          </div>
+        </Link>
+        <hr className="border-b-1 border-white w-full" />
+        <div
+          className="flex justify-center gap-3 pl-4 items-center m-4"
+          onClick={logout}
+        >
           <Image
             src={"/assets/Logout.svg"}
             alt="logout"

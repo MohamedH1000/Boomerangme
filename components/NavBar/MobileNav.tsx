@@ -1,9 +1,19 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const MobileNav = () => {
+  const router = useRouter();
   const [open, setIsOpen] = useState(false);
+  const logout = () => {
+    try {
+      router.push("/sign-in");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div
       className="flex justify-center items-center md:hidden max-md:static mr-4 relative"
@@ -56,26 +66,30 @@ const MobileNav = () => {
                   className="invert"
                 />
               </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
-                <Image
-                  src={"/icons/addcards.svg"}
-                  alt="my cards"
-                  width={16}
-                  height={16}
-                  className="invert"
-                />
-                <p className="text-white text-[12px]">Create card</p>
-              </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
-                <Image
-                  src={"/icons/customers.svg"}
-                  alt="my cards"
-                  width={16}
-                  height={16}
-                  className="invert"
-                />
-                <p className="text-white text-[12px]">Customers</p>
-              </div>
+              <Link href={"cards/create"}>
+                <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+                  <Image
+                    src={"/icons/addcards.svg"}
+                    alt="my cards"
+                    width={16}
+                    height={16}
+                    className="invert"
+                  />
+                  <p className="text-white text-[12px]">Create card</p>
+                </div>
+              </Link>
+              <Link href={"/clients"}>
+                <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+                  <Image
+                    src={"/icons/customers.svg"}
+                    alt="my cards"
+                    width={16}
+                    height={16}
+                    className="invert"
+                  />
+                  <p className="text-white text-[12px]">Customers</p>
+                </div>
+              </Link>
               <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
                 <Image
                   src={"/icons/mailings.svg"}
@@ -86,56 +100,66 @@ const MobileNav = () => {
                 />
                 <p className="text-white text-[12px]">Push</p>
               </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
-                <Image
-                  src={"/icons/locations.svg"}
-                  alt="my cards"
-                  width={16}
-                  height={16}
-                  className="invert"
-                />
-                <p className="text-white text-[12px]">Locations</p>
-              </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
-                <Image
-                  src={"/assets/statistics.svg"}
-                  alt="my cards"
-                  width={16}
-                  height={16}
-                  className="invert"
-                />
-                <p className="text-white text-[12px]">Account statistics</p>
-              </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
-                <Image
-                  src={"/icons/manager.svg"}
-                  alt="my cards"
-                  width={16}
-                  height={16}
-                  className="invert"
-                />
-                <p className="text-white text-[12px]">Managers</p>
-              </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
-                <Image
-                  src={"/assets/settings.svg"}
-                  alt="settings"
-                  width={16}
-                  height={16}
-                  className="invert"
-                />
-                <p className="text-white text-[12px]">Settings</p>
-              </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
-                <Image
-                  src={"/icons/scanner.svg"}
-                  alt="scanner"
-                  width={16}
-                  height={16}
-                  className="invert fill-white"
-                />
-                <p className="text-white text-[12px]">Scanner App</p>
-              </div>
+              <Link href={"/locations"}>
+                <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+                  <Image
+                    src={"/icons/locations.svg"}
+                    alt="my cards"
+                    width={16}
+                    height={16}
+                    className="invert"
+                  />
+                  <p className="text-white text-[12px]">Locations</p>
+                </div>
+              </Link>
+              <Link href={"/"}>
+                <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+                  <Image
+                    src={"/assets/statistics.svg"}
+                    alt="my cards"
+                    width={16}
+                    height={16}
+                    className="invert"
+                  />
+                  <p className="text-white text-[12px]">Account statistics</p>
+                </div>
+              </Link>
+              <Link href={"/managers"}>
+                <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+                  <Image
+                    src={"/icons/manager.svg"}
+                    alt="my cards"
+                    width={16}
+                    height={16}
+                    className="invert"
+                  />
+                  <p className="text-white text-[12px]">Managers</p>
+                </div>
+              </Link>
+              <Link href={"/settings"}>
+                <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+                  <Image
+                    src={"/assets/settings.svg"}
+                    alt="settings"
+                    width={16}
+                    height={16}
+                    className="invert"
+                  />
+                  <p className="text-white text-[12px]">Settings</p>
+                </div>
+              </Link>
+              <Link href={"/scanner-app"}>
+                <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+                  <Image
+                    src={"/icons/scanner.svg"}
+                    alt="scanner"
+                    width={16}
+                    height={16}
+                    className="invert fill-white"
+                  />
+                  <p className="text-white text-[12px]">Scanner App</p>
+                </div>
+              </Link>
               <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-between items-center w-full ">
                 <div className="flex justify-center gap-5 items-center">
                   <Image
@@ -155,7 +179,10 @@ const MobileNav = () => {
                   className="invert"
                 />
               </div>
-              <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
+              <div
+                className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full"
+                onClick={logout}
+              >
                 <Image
                   src={"/assets/logout.svg"}
                   alt="Logout"
