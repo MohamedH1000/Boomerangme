@@ -30,7 +30,7 @@ const Scanner = () => {
     phone: "+201001945491",
   };
   return (
-    <section className="min-h-screen flex justify-center items-start mt-[130px]">
+    <section className=" flex justify-center items-start mt-[100px]">
       <div className="flex flex-col gap-3 justify-center items-center">
         <p className="opacity-60">You are logged in as:</p>
         <span className="leading-10 font-bold text-[30px]">
@@ -41,6 +41,13 @@ const Scanner = () => {
           {currentUser?.email},&nbsp;{currentUser?.phone}
         </p>
         <p className="opacity-60">Press the "Scan" button to scan the card</p>
+        <div
+          className="w-[568px] h-[240px] rounded-lg bg-[#1F1E1F] 
+        flex justify-center items-center mt-20 cursor-pointer max-sm:w-[300px]  "
+        >
+          <span className="text-white font-bold">Scan</span>
+        </div>
+        <div className="opacity-60 font-semibold mt-2">Search Customers</div>
       </div>
     </section>
   );
