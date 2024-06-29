@@ -6,12 +6,12 @@ import { usePathname } from "next/navigation";
 const SideBar = () => {
   const pathname = usePathname();
   const activeHome = pathname === "/";
-  const activeCards = pathname === "/cards";
-  const activeClients = pathname === "/clients";
-  const activeMailings = pathname === "/mailings";
-  const activeLocations = pathname === "/locations";
-  const activeManagers = pathname === "/managers";
-  const activeSettings = pathname === "/settings";
+  const activeCards = pathname.includes("/cards");
+  const activeClients = pathname.includes("/clients");
+  const activeMailings = pathname.includes("/mailings");
+  const activeLocations = pathname.includes("/locations");
+  const activeManagers = pathname.includes("/managers");
+  const activeSettings = pathname.includes("/settings");
   return (
     <div
       className="fixed md:top-[64px] md:left-0 
@@ -45,7 +45,7 @@ const SideBar = () => {
             </svg>
           </div>
         </Link>
-        <Link href={"cards"}>
+        <Link href={"/cards"}>
           <div
             className={`
             ${
@@ -67,7 +67,7 @@ const SideBar = () => {
             </svg>
           </div>
         </Link>
-        <Link href={"clients"}>
+        <Link href={"/clients"}>
           <div
             className={`
             ${
@@ -89,7 +89,7 @@ const SideBar = () => {
             </svg>
           </div>
         </Link>
-        <Link href={"mailings"}>
+        <Link href={"/mailings"}>
           <div
             className={`
            ${
@@ -111,7 +111,7 @@ const SideBar = () => {
             </svg>
           </div>
         </Link>
-        <Link href={"locations"}>
+        <Link href={"/locations"}>
           <div
             className={`
              ${
@@ -133,7 +133,7 @@ const SideBar = () => {
             </svg>
           </div>
         </Link>
-        <Link href={"managers"}>
+        <Link href={"/managers"}>
           <div
             className={`
              ${
@@ -155,7 +155,7 @@ const SideBar = () => {
             </svg>
           </div>
         </Link>
-        <Link href={"settings"}>
+        <Link href={"/settings"}>
           <div
             className={`
              ${

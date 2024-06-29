@@ -15,7 +15,11 @@ const page = () => {
     { id: 2, name: "sar", type: "reward", active: false },
   ];
   return (
-    <div className="p-20 flex justify-start items-center flex-wrap max-md:p-10 max-sm:p-3 max-sm:pt-20 mb-20">
+    <div
+      className="p-20 flex justify-start items-center 
+    flex-wrap max-md:p-10 max-sm:p-3 
+    max-sm:pt-20 mb-20"
+    >
       <div className="w-[355px] mt-10">
         <div className="flex flex-col items-center justify-start ">
           <div className="w-[80px] h-24px rounded-full flex items-center bg-[#eaeaed] p-1 justify-center">
@@ -69,7 +73,16 @@ const page = () => {
                 Open
               </Button>
               <div className="flex justify-center gap-3 items-center">
-                <div className="bg-[#ebebeb] text-white w-[40px] h-[40px] flex justify-center items-center rounded-md cursor-pointer hover:bg-[#1dcd27] duration-300 parent">
+                <div
+                  className={`${
+                    card.active
+                      ? "pointer-events-none opacity-40"
+                      : "pointer-events-auto "
+                  } bg-[#ebebeb] text-white w-[40px] h-[40px] 
+                flex justify-center items-center 
+                rounded-md cursor-pointer hover:bg-[#1dcd27] 
+                duration-300 parent`}
+                >
                   <Image
                     src={"/icons/startButton.svg"}
                     alt="start button"

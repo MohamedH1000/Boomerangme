@@ -23,7 +23,9 @@ export default function RootLayout({
       <NavBar />
       <div className="flex">
         <SideBar />
-        <section>{children}</section>
+        <section className="w-full min-h-screen bg-[#F7F7F8]">
+          {children}
+        </section>
       </div>
     </main>
   );
