@@ -37,9 +37,13 @@ const Scanner = () => {
           {" "}
           {currentUser?.name}
         </span>
-        <p>
-          {currentUser?.email},&nbsp;{currentUser?.phone}
-        </p>
+        <div
+          className="flex justify-center 
+        items-center max-sm:flex-col"
+        >
+          <p>{currentUser?.email}</p>
+          <p>{currentUser?.phone}</p>
+        </div>
         <p className="opacity-60">Press the "Scan" button to scan the card</p>
         <div
           className="w-[568px] h-[240px] rounded-lg bg-[#1F1E1F] 
