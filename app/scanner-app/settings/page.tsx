@@ -8,7 +8,7 @@ const page = () => {
       <ScannerNav />
       <div className="mt-[30px] flex flex-col justify-center items-center">
         <h1 className="mb-8">Settings</h1>
-        <div className="flex flex-col justify-center items-center w-[600px]">
+        <div className="flex flex-col justify-center items-center w-[600px] max-sm:w-[300px]">
           <div className="flex justify-start w-full  border-b-[1px] border-[gray]">
             <p
               className="uppercase opacity-60
