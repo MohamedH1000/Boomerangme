@@ -27,10 +27,19 @@ const page = () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-5 mt-10">
             <p className="text-[18px] font-bold">Create Card</p>
-            <Button className="bg-[black] text-white w-[246px] h-[40px]">
+            <Button
+              className="bg-[black] text-white 
+            w-[246px] h-[40px] 
+            hover:opacity-80 duration-300"
+            >
               Template
             </Button>
-            <Button className="bg-white border-[1px] border-[gray] text-black w-[246px] h-[40px]">
+            <Button
+              className="bg-white border-[1px] 
+              border-[gray] text-black w-[246px] h-[40px] 
+            hover:bg-[black] hover:text-white duration-300 
+            hover:border-none"
+            >
               From Scratch
             </Button>
           </div>
@@ -52,7 +61,11 @@ const page = () => {
             </div>
             <div className="flex flex-col items-center justify-center gap-5 mt-10">
               <p className="text-[18px] font-bold">{card?.name}</p>
-              <Button className="bg-[black] text-white w-[246px] h-[40px]">
+              <Button
+                className="bg-[black] text-white 
+              w-[246px] h-[40px]
+              hover:opacity-80 duration-300"
+              >
                 Open
               </Button>
               <div className="flex justify-center gap-3 items-center">
