@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <nav
       className="bg-[#1F1E1F] w-[100%] fixed top-0 h-[64px] 
-    flex justify-between"
+    flex justify-between z-[10]"
     >
       <NavLinks />
       <MobileNav />

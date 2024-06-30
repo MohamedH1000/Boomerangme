@@ -1,4 +1,5 @@
 "use client";
+import MobilePlan from "@/components/Settings/MobilePlan";
 import SettingPlan from "@/components/Settings/SettingPlan";
 import TablePlan from "@/components/Settings/TablePlan";
 import { Button } from "@/components/ui/button";
@@ -173,6 +174,7 @@ mt-10 w-full bg-[#F7F7F8] pr-10 max-sm:pl-5 max-sm:pr-5"
         </div>
       </div>
       <TablePlan />
+      <MobilePlan />
     </div>
   );
 };
