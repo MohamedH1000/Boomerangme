@@ -1,3 +1,4 @@
+import PersonalSettings from "@/components/Settings/PersonalSettings";
 import React from "react";
 
 const page = () => {
@@ -11,14 +12,24 @@ const page = () => {
         <div
           className="w-[30%] h-[500px] flex flex-col 
         items-center justify-center gap-5 bg-[#FFFFFF] rounded-md
-        border-[#D5D5DD] border-[1px] max-sm:w-[100%]"
-        ></div>
+        border-[#D5D5DD] border-[1px] max-sm:w-[100%] p-4 "
+        >
+          <div className="flex justify-center items-center w-[80%] cursor-pointer">
+            <div
+              className="w-full rounded-full flex justify-center items-center
+              border-[#D5D5DD] border-[1px] aspect-square 
+              bg-[#99999e] text-[#D5D5DD] text-[30px]"
+            >
+              +
+            </div>
+          </div>
+          <div className="mt-5 flex flex-col justify-center items-center">
+            <h1 className="text-[30px]">Mohamed Hesham</h1>
+            <p className="text-[13px]">Mohammedhesham115@gmail.com</p>
+          </div>
+        </div>
         <div className="flex flex-col w-[66%] gap-5 max-sm:w-[100%]">
-          <div
-            className=" flex flex-col h-[500px]
-          items-center justify-center gap-5 bg-[#FFFFFF] rounded-md
-          border-[#D5D5DD] border-[1px]"
-          ></div>
+          <PersonalSettings />
           <div
             className="flex flex-col h-[500px]
           items-center justify-center gap-5 bg-[#FFFFFF] rounded-md
