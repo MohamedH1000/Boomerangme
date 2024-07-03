@@ -19,30 +19,45 @@ const page = () => {
       </div>
       <div
         className="flex justify-center items-start 
-      flex-wrap max-md:flex-col w-full max-md:mb-20
+      flex-wrap max-md:flex-col w-full max-md:mb-20 mb-10
       gap-4 mt-7"
       >
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
           <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -54,27 +69,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - Loyal - Regular</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -86,27 +116,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - Champions</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -118,27 +163,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - At risk</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -150,27 +210,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - Medium (borderline)</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -182,27 +257,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - Growths</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -214,27 +304,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - Sleeping</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -246,27 +351,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - Doubtful</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
@@ -278,27 +398,42 @@ const page = () => {
             </Button>
           </div>
         </div>
-        <div className="p-4 w-[30%] border-[#656265] border-[1px] rounded-md bg-[#FFFFFF]">
-          <h1 className="text-[18px] font-medium">RFM - Need attention</h1>
+        <div
+          className="p-4 w-[30%] border-[#D5D5DD] 
+        border-[1px] rounded-md bg-[#FFFFFF] max-md:w-[100%]"
+        >
+          <h1 className="text-[18px] font-medium">RFM - Beginners</h1>
           <div
             className="flex justify-center items-start 
-          flex-wrap mt-4 "
+          flex-wrap mt-4 gap-3"
           >
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyform">Frequency from</label>
+              <Input
+                name="frequencyform"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="frequencyto">Frequency to</label>
+              <Input
+                name="frequencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyfrom">Recency from</label>
+              <Input
+                name="recencyfrom"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
             <div>
-              <label htmlFor="frequencyform"></label>
-              <Input name="frequencyform" />
+              <label htmlFor="recencyto">Recency to</label>
+              <Input
+                name="recencyto"
+                className="border-[#D5D5DD] border-[1px]"
+              />
             </div>
           </div>
           <div className="w-full p-4">
