@@ -104,7 +104,7 @@ const page = () => {
           <TableBody>
             <TableRow>
               <Button className=" bg-[black] text-white rounded-md w-full">
-                Tarrif limit reached
+                Add manager
               </Button>
               {/* <TableCell className="font-medium">INV001</TableCell>
               <TableCell>Paid</TableCell>
@@ -129,11 +129,8 @@ const page = () => {
             loyalty cards and drive loyalty program. Managers can be divided by
             sales points or by shifts.
           </p>
-          <Button
-            disabled
-            className="bg-[black] text-white max-md:w-full w-3/6 mt-20"
-          >
-            Tarrif limit reached
+          <Button className="bg-[black] text-white max-md:w-full w-3/6 mt-20">
+            Add Manager
           </Button>
         </div>
         <div className="p-4 bg-[#FFFFFF] border-[#D5D5DD] border-[1px] w-3/6 max-md:w-full relative">
