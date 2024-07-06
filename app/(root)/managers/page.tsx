@@ -13,14 +13,21 @@ import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
-  TableCaption,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Metadata } from "next";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Switch } from "@/components/ui/switch";
 
 export const metadata: Metadata = {
   title: "Managers | Boomerangme",
@@ -103,9 +110,94 @@ const page = () => {
           </TableHeader>
           <TableBody>
             <TableRow>
-              <Button className=" bg-[black] text-white rounded-md w-full">
-                Add manager
-              </Button>
+              <td colSpan="6" className="p-0">
+                <Dialog>
+                  <DialogTrigger className="bg-[black] text-white max-md:w-full w-full h-[40px] rounded-md mt-5">
+                    Add Manager
+                  </DialogTrigger>
+                  <DialogContent className="bg-white h-[623px] overflow-y-scroll mt-[-8px] px-10">
+                    <DialogHeader>
+                      <DialogTitle>Add manager</DialogTitle>
+                    </DialogHeader>
+                    <form action="" className="flex flex-col items-start gap-1">
+                      <label htmlFor="fullname">Full name</label>
+                      <Input
+                        name="fullname"
+                        className="p-4 placeholder:text-[gray]"
+                        placeholder="Full name"
+                      />
+                      <label htmlFor="email" className="mt-5">
+                        Email
+                      </label>
+                      <Input
+                        name="email"
+                        className="p-4 placeholder:text-[gray]"
+                        placeholder="Email"
+                      />
+                      <label htmlFor="phonenumber" className="mt-5">
+                        Phone number
+                      </label>
+                      <Input
+                        name="phonenumber"
+                        className="p-4 placeholder:text-[gray]"
+                        placeholder="Phone Number"
+                        type="number"
+                      />
+                      <label htmlFor="password" className="mt-5">
+                        Password
+                      </label>
+                      <Input
+                        name="password"
+                        className="p-4 placeholder:text-[gray]"
+                        placeholder="Password"
+                      />
+                      <label htmlFor="repeatpassword" className="mt-5">
+                        Repeat Password
+                      </label>
+                      <Input
+                        name="repeatpassword"
+                        className="p-4 placeholder:text-[gray]"
+                        placeholder="Repeat Password"
+                      />
+                      <label htmlFor="location" className="mt-5">
+                        Location Select
+                      </label>
+                      <Select name="location">
+                        <SelectTrigger className="w-full">
+                          <SelectValue
+                            placeholder="Location Select"
+                            className="placeholder:text-[gray]"
+                          />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white">
+                          <SelectItem value="location">
+                            Your location
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <label htmlFor="notes">Notes</label>
+                      <Input
+                        name="notes"
+                        className="p-4 placeholder:text-[gray]"
+                        placeholder="Notes"
+                      />
+                      <div className="w-full bg-[#f7f7f8] border-[#D5D5DD] border-[1px] rounded-md p-4 flex justify-between items-center">
+                        <h1>Send access to email</h1>
+                        <Switch
+                          className="data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-[#e4e0e0] 
+            border-[#D5D5DD] border-[1px]"
+                        />
+                      </div>
+                      <Button className="w-full rounded-md bg-[black] text-white p-4 mt-5">
+                        Add Manager
+                      </Button>
+                      <Button className="w-full rounded-md bg-[white] text-black p-4 mt-5 border-[1px] border-[gray]">
+                        Cancel
+                      </Button>
+                    </form>
+                  </DialogContent>
+                </Dialog>
+              </td>
               {/* <TableCell className="font-medium">INV001</TableCell>
               <TableCell>Paid</TableCell>
               <TableCell>Credit Card</TableCell>
@@ -129,9 +221,90 @@ const page = () => {
             loyalty cards and drive loyalty program. Managers can be divided by
             sales points or by shifts.
           </p>
-          <Button className="bg-[black] text-white max-md:w-full w-3/6 mt-20">
-            Add Manager
-          </Button>
+          <Dialog>
+            <DialogTrigger className="bg-[black] text-white max-md:w-full w-3/6 h-[40px] rounded-md mt-5">
+              Add Manager
+            </DialogTrigger>
+            <DialogContent className="bg-white h-[623px] overflow-y-scroll mt-[-8px] px-10">
+              <DialogHeader>
+                <DialogTitle>Add manager</DialogTitle>
+              </DialogHeader>
+              <form action="" className="flex flex-col items-start gap-1">
+                <label htmlFor="fullname">Full name</label>
+                <Input
+                  name="fullname"
+                  className="p-4 placeholder:text-[gray]"
+                  placeholder="Full name"
+                />
+                <label htmlFor="email" className="mt-5">
+                  Email
+                </label>
+                <Input
+                  name="email"
+                  className="p-4 placeholder:text-[gray]"
+                  placeholder="Email"
+                />
+                <label htmlFor="phonenumber" className="mt-5">
+                  Phone number
+                </label>
+                <Input
+                  name="phonenumber"
+                  className="p-4 placeholder:text-[gray]"
+                  placeholder="Phone Number"
+                  type="number"
+                />
+                <label htmlFor="password" className="mt-5">
+                  Password
+                </label>
+                <Input
+                  name="password"
+                  className="p-4 placeholder:text-[gray]"
+                  placeholder="Password"
+                />
+                <label htmlFor="repeatpassword" className="mt-5">
+                  Repeat Password
+                </label>
+                <Input
+                  name="repeatpassword"
+                  className="p-4 placeholder:text-[gray]"
+                  placeholder="Repeat Password"
+                />
+                <label htmlFor="location" className="mt-5">
+                  Location Select
+                </label>
+                <Select name="location">
+                  <SelectTrigger className="w-full">
+                    <SelectValue
+                      placeholder="Location Select"
+                      className="placeholder:text-[gray]"
+                    />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="location">Your location</SelectItem>
+                  </SelectContent>
+                </Select>
+                <label htmlFor="notes">Notes</label>
+                <Input
+                  name="notes"
+                  className="p-4 placeholder:text-[gray]"
+                  placeholder="Notes"
+                />
+                <div className="w-full bg-[#f7f7f8] border-[#D5D5DD] border-[1px] rounded-md p-4 flex justify-between items-center">
+                  <h1>Send access to email</h1>
+                  <Switch
+                    className="data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-[#e4e0e0] 
+            border-[#D5D5DD] border-[1px]"
+                  />
+                </div>
+                <Button className="w-full rounded-md bg-[black] text-white p-4 mt-5">
+                  Add Manager
+                </Button>
+                <Button className="w-full rounded-md bg-[white] text-black p-4 mt-5 border-[1px] border-[gray]">
+                  Cancel
+                </Button>
+              </form>
+            </DialogContent>
+          </Dialog>
         </div>
         <div className="p-4 bg-[#FFFFFF] border-[#D5D5DD] border-[1px] w-3/6 max-md:w-full relative">
           <Image
@@ -147,9 +320,11 @@ const page = () => {
             customers at the point of sale. No app installation is required, as
             the scanner works directly from your mobile browser.
           </p>
-          <Button className="bg-[black] text-white max-md:w-full w-3/6 mt-20">
-            Open
-          </Button>
+          <Link href={"/scanner-app"}>
+            <Button className="bg-[black] text-white max-md:w-full w-3/6 mt-20">
+              Open
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
