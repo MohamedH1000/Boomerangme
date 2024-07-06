@@ -110,7 +110,7 @@ const page = () => {
           </TableHeader>
           <TableBody>
             <TableRow>
-              <td colSpan="6" className="p-0">
+              <td colSpan={6} className="p-0">
                 <Dialog>
                   <DialogTrigger className="bg-[black] text-white max-md:w-full w-full h-[40px] rounded-md mt-5">
                     Add Manager
