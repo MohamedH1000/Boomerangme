@@ -23,15 +23,19 @@ export default async function RootLayout({
   const currentUser = await getCurrentUser();
   return (
     <>
-      <main className={`relative ${tajawal.className}`}>
-        <NavBar currentUser={currentUser} />
-        <div className="flex">
-          <SideBar currentUser={currentUser} />
-          <section className="w-full min-h-screen bg-[#F7F7F8]">
-            {children}
-          </section>
-        </div>
-      </main>
+      {currentUser ? (
+        <main className={`relative ${tajawal.className}`}>
+          <NavBar currentUser={currentUser} />
+          <div className="flex">
+            <SideBar currentUser={currentUser} />
+            <section className="w-full min-h-screen bg-[#F7F7F8]">
+              {children}
+            </section>
+          </div>
+        </main>
+      ) : (
+        redirect("/sign-in")
+      )}
     </>
   );
 }
