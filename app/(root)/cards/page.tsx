@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import "./cards.css";
+import Link from "next/link";
 
 const page = () => {
   const myCards = [
@@ -31,28 +32,32 @@ const page = () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-5 mt-10">
             <p className="text-[18px] font-bold">Create Card</p>
-            <Button
-              className="bg-[black] text-white 
-            w-[246px] h-[40px] 
-            hover:opacity-80 duration-300"
-            >
-              Template
-            </Button>
-            <Button
-              className="bg-white border-[1px] 
-              border-[gray] text-black w-[246px] h-[40px] 
-            hover:bg-[black] hover:text-white duration-300 
-            hover:border-none"
-            >
-              From Scratch
-            </Button>
+            <Link href={"/cards/templates"}>
+              <Button
+                className="bg-[black] text-white
+              w-[246px] h-[40px]
+              hover:opacity-80 duration-300"
+              >
+                Template
+              </Button>
+            </Link>
+            <Link href={"/cards/create"}>
+              <Button
+                className="bg-white border-[1px]
+                border-[gray] text-black w-[246px] h-[40px]
+              hover:bg-[black] hover:text-white duration-300
+              hover:border-none"
+              >
+                From Scratch
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
       {myCards.map((card, i) => (
-        <div className="w-[355px] mt-10" key={i}>
-          <div className="flex flex-col items-center justify-start ">
-            <div className="w-[80px] h-24px rounded-full flex items-center bg-[#eaeaed] p-1 justify-center">
+        <div className="w-[355px] mt-10 " key={i}>
+          <div className="flex flex-col items-center justify-start bg-[url('/assets/iphone.png')] bg-cover bg-center bg-no-repeat">
+            <div className="w-[80px] h-24px rounded-full flex items-center bg-[#eaeaed] p-1 justify-center ">
               {card?.active ? (
                 <div className="bg-[#1dcd27] rounded-full h-2 mr-3 w-2 " />
               ) : (
@@ -66,9 +71,9 @@ const page = () => {
             <div className="flex flex-col items-center justify-center gap-5 mt-10">
               <p className="text-[18px] font-bold">{card?.name}</p>
               <Button
-                className="bg-[black] text-white 
-              w-[246px] h-[40px]
-              hover:opacity-80 duration-300"
+                className="bg-[black] text-white
+                w-[246px] h-[40px]
+                hover:opacity-80 duration-300"
               >
                 Open
               </Button>
@@ -78,10 +83,10 @@ const page = () => {
                     card.active
                       ? "pointer-events-none opacity-40"
                       : "pointer-events-auto "
-                  } bg-[#ebebeb] text-white w-[40px] h-[40px] 
-                flex justify-center items-center 
-                rounded-md cursor-pointer hover:bg-[#1dcd27] 
-                duration-300 parent`}
+                  } bg-[#ebebeb] text-white w-[40px] h-[40px]
+                  flex justify-center items-center
+                  rounded-md cursor-pointer hover:bg-[#1dcd27]
+                  duration-300 parent`}
                 >
                   <Image
                     src={"/icons/startButton.svg"}
