@@ -42,7 +42,14 @@ const AuthForm = ({ type }: { type: string }) => {
       // Sign up with Appwrite & create plaid token
 
       if (type === "sign-up") {
-        await createUser(userData);
+        try {
+          await createUser(userData);
+          toast({
+            title: "Your account has been created successfully",
+          });
+        } catch (error) {
+          console.log(error);
+        }
       }
 
       if (type === "sign-in") {
