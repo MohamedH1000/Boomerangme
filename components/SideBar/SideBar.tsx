@@ -3,15 +3,15 @@ import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 
-const SideBar = () => {
+const SideBar = (currentUser: User) => {
   const pathname = usePathname();
   const activeHome = pathname === "/";
-  const activeCards = pathname.includes("/cards");
-  const activeClients = pathname.includes("/clients");
-  const activeMailings = pathname.includes("/mailings");
-  const activeLocations = pathname.includes("/locations");
-  const activeManagers = pathname.includes("/managers");
-  const activeSettings = pathname.includes("/settings");
+  const activeCards = pathname?.includes("/cards");
+  const activeClients = pathname?.includes("/clients");
+  const activeMailings = pathname?.includes("/mailings");
+  const activeLocations = pathname?.includes("/locations");
+  const activeManagers = pathname?.includes("/managers");
+  const activeSettings = pathname?.includes("/settings");
   return (
     <div
       className="fixed md:top-[64px] md:left-0 

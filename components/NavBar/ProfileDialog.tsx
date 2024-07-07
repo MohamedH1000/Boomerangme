@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { Dispatch, SetStateAction } from "react";
 import { useRouter } from "next/navigation";
+import { signOut } from "next-auth/react";
+import { useToast } from "../ui/use-toast";
 
 interface Props {
   setOpenLang: Dispatch<SetStateAction<boolean>>;
@@ -16,10 +18,14 @@ const ProfileDialog = ({
   openProfile,
   setOpenProfile,
 }: Props) => {
+  const { toast } = useToast();
   const router = useRouter();
   const logout = () => {
     try {
-      router.push("/sign-in");
+      signOut({ callbackUrl: "/sign-in", redirect: true });
+      toast({
+        title: "تم تسجيل الخروج بنجاح",
+      });
     } catch (error) {
       console.log(error);
     }
