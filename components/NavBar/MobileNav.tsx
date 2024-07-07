@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const MobileNav = () => {
+const MobileNav = ({ currentUser }: any) => {
   const router = useRouter();
   const [open, setIsOpen] = useState(false);
   const logout = () => {
@@ -34,7 +34,7 @@ const MobileNav = () => {
                 <div className="text-white text-[12px]">
                   <h1>
                     Hi <br />
-                    <span className="font-bold">Mohamed</span>
+                    <span className="font-bold">{currentUser?.firstName}</span>
                   </h1>
                 </div>
                 <div className="text-white text-[12px]">

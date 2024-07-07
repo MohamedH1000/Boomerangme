@@ -47,6 +47,20 @@ const AuthForm = ({ type }: { type: string }) => {
           toast({
             title: "Your account has been created successfully",
           });
+          const loginData = {
+            email: userData.email,
+            password: userData.password,
+          };
+          signIn("credentials", {
+            ...loginData,
+            redirect: false,
+          }).then((callback) => {
+            setIsLoading(false);
+
+            if (callback?.ok) {
+              router.refresh();
+            }
+          });
         } catch (error) {
           console.log(error);
         }

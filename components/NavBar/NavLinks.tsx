@@ -8,7 +8,7 @@ import LanguageDropdown from "./LanguageDropdown";
 import HiDialog from "./HiDialog";
 import Implementation from "./Implementation";
 
-const NavLinks = () => {
+const NavLinks = ({ currentUser }: any) => {
   const [openNot, setOpenNot] = useState(false);
   const [openLang, setOpenLang] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
@@ -32,6 +32,7 @@ const NavLinks = () => {
             openHi={openHi}
             setOpenHi={setOpenHi}
             setOpenImplement={setOpenImplement}
+            currentUser={currentUser}
           />
           <Implementation
             openImplement={openImplement}

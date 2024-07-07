@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 
-const SideBar = (currentUser: User) => {
+const SideBar = ({ currentUser }: any) => {
   const pathname = usePathname();
   const activeHome = pathname === "/";
   const activeCards = pathname?.includes("/cards");

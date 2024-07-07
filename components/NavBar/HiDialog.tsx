@@ -4,9 +4,14 @@ interface Props {
   openHi: Boolean;
   setOpenHi: Dispatch<SetStateAction<boolean>>;
   setOpenImplement: Dispatch<SetStateAction<boolean>>;
+  currentUser: any;
 }
-const HiDialog = ({ openHi, setOpenHi, setOpenImplement }: Props) => {
-  const myuser = { id: 1, username: "mohamed" };
+const HiDialog = async ({
+  openHi,
+  setOpenHi,
+  setOpenImplement,
+  currentUser,
+}: Props) => {
   return (
     <div
       className={`${
@@ -20,7 +25,7 @@ const HiDialog = ({ openHi, setOpenHi, setOpenImplement }: Props) => {
       }}
     >
       <p>
-        Hi, <br /> <span className="font-bold">{myuser?.username}</span>
+        Hi, <br /> <span className="font-bold">{currentUser?.firstName}</span>
       </p>
       <div className="flex justify-center items-center h-[20px] w-[20px] bg-[#2E2E2E] rounded-full pl-[5px]">
         <svg viewBox="0 0 8 4" className="fill-white h-[5px] mr-[5px] ">
