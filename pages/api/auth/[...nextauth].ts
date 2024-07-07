@@ -25,13 +25,13 @@ export const authOptions: AuthOptions = {
         password: { label: "password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials.email || !credentials.password) {
+        if (!credentials?.email || !credentials?.password) {
           throw new Error("invalid credentials");
         }
 
         const user = await prisma.user.findUnique({
           where: {
-            email: credentials.email,
+            email: credentials?.email,
           },
         });
         if (!user || !user?.hashedPassword) {
@@ -54,7 +54,7 @@ export const authOptions: AuthOptions = {
   pages: {
     signIn: "/sign-in",
   },
-  debug: process.env.NODE_ENV === "development",
+  debug: process.env.NODE_ENV !== "production",
   session: {
     strategy: "jwt",
   },
