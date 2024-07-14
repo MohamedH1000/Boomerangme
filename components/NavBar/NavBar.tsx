@@ -1,7 +1,6 @@
 import React from "react";
 import MobileNav from "./MobileNav";
 import NavLinks from "./NavLinks";
-import { User } from "@prisma/client";
 
 const NavBar = ({ currentUser }: any) => {
   return (

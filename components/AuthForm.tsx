@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -79,14 +78,14 @@ const AuthForm = ({ type }: { type: string }) => {
 
           if (callback?.ok) {
             toast({
-              title: "تم تسجيل دخول بنجاح",
+              title: "Signed In Successfully",
             });
             router.refresh();
           }
 
           if (callback?.error) {
             toast({
-              title: "حدثت مشكلة اثناء عملية تسجيل الدخول",
+              title: "An error happened during the sign in process",
             });
           }
         });

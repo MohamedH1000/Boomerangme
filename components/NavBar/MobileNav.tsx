@@ -3,13 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { signOut } from "next-auth/react";
+import { useToast } from "../ui/use-toast";
 
 const MobileNav = ({ currentUser }: any) => {
+  const { toast } = useToast();
   const router = useRouter();
   const [open, setIsOpen] = useState(false);
   const logout = () => {
     try {
-      router.push("/sign-in");
+      signOut({ callbackUrl: "/sign-in", redirect: true });
+      toast({
+        title: "تم تسجيل الخروج بنجاح",
+      });
     } catch (error) {
       console.log(error);
     }

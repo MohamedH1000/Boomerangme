@@ -6,7 +6,7 @@ interface Props {
   setOpenImplement: Dispatch<SetStateAction<boolean>>;
   currentUser: any;
 }
-const HiDialog = async ({
+const HiDialog = ({
   openHi,
   setOpenHi,
   setOpenImplement,
