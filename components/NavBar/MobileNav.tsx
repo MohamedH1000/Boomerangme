@@ -22,7 +22,7 @@ const MobileNav = ({ currentUser }: any) => {
   };
   return (
     <div
-      className="flex justify-center items-center md:hidden max-md:static mr-4 relative"
+      className="flex justify-center items-center md:hidden max-md:static mr-4 relative z-50"
       onClick={() => setIsOpen((prev: any) => !prev)}
     >
       {open ? (

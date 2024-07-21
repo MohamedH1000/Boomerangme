@@ -16,78 +16,78 @@ const MobilePlan = () => {
           <p>from $9</p>
         </div>
         <div className="flex flex-col justify-center items-start p-4">
-          <p className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>1 promotion</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Unlimited Cards</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>No managers</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Push-notifications</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Geo-push</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Support</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#c9c9d2] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">-</p>
               </div>
             </div>
             <h1>Referral program</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#c9c9d2] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">-</p>
               </div>
             </div>
             <h1>Automated push</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#c9c9d2] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">-</p>
               </div>
             </div>
             <h1>API</h1>
-          </p>
+          </div>
         </div>
         {/*Buy Button */}
         <div className="flex justify-center items-center w-full p-4">
@@ -103,78 +103,78 @@ const MobilePlan = () => {
           <p>from $99</p>
         </div>
         <div className="flex flex-col justify-center items-start p-4">
-          <p className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>3 promotion</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Unlimited Cards</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>10 managers</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Push-notifications</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Geo-push</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Support</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Referral program</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Automated push</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#c9c9d2] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">-</p>
               </div>
             </div>
             <h1>API</h1>
-          </p>
+          </div>
         </div>
         {/*Buy Button */}
         <div className="flex justify-center items-center w-full p-4">
@@ -190,78 +190,78 @@ const MobilePlan = () => {
           <p>from $129</p>
         </div>
         <div className="flex flex-col justify-center items-start p-4">
-          <p className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>10 promotion</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Unlimited Cards</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>50 managers</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Push-notifications</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Geo-push</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Support</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Referral program</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>Automated push</h1>
-          </p>
-          <p className="flex justify-start items-center gap-2">
+          </div>
+          <div className="flex justify-start items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-[#1dcd27] text-white flex justify-center items-center">
               <div className="flex justify-center items-center">
                 <p className="mr-[1px] mb-[1px]">+</p>
               </div>
             </div>
             <h1>API</h1>
-          </p>
+          </div>
         </div>
         {/*Buy Button */}
         <div className="flex justify-center items-center w-full p-4">

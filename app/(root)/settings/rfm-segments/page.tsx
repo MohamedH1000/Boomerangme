@@ -4,7 +4,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pl-20 pt-10 max-md:pl-4 pr-4">
+    <div className="pl-20 mt-[175px] max-md:pl-4 pr-4">
       <h1 className="text-[30px]">RFM settings</h1>
       <p className="mt-5">
         Frequency - visits (how often your customers buy from you) <br />

@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div
       className="pl-20 max-md:pl-5 
-    pt-10 w-full pr-5"
+      mt-[175px] w-full pr-5"
     >
       <h1 className="text-[28px] max-ms:text-[15px]">Integrations</h1>
       <div

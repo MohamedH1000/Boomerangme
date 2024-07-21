@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pl-20 py-10 max-md:pl-5 max-md:py-5 pr-5">
+    <div className="pl-20 mt-[175px] max-md:pl-5 max-md:py-5 pr-5">
       <h1 className="text-[26px]">About the agency</h1>
       <div
         className="border-[#D5D5DD] border-[1px] bg-[#FFFFFF] w-full

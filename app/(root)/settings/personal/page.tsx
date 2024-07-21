@@ -4,7 +4,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pl-20 pt-10 w-full bg-[#F7F7F8] pr-5 max-sm:pl-5 mb-20 max-md:pl-5">
+    <div className="pl-20 mt-[175px] w-full bg-[#F7F7F8] pr-5 max-sm:pl-5 mb-20 max-md:pl-5">
       <h1 className="text-[20px] font-medium">Personal Settings</h1>
       <div
         className="mt-10 flex justify-center items-start 
