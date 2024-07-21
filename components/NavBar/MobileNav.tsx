@@ -22,7 +22,7 @@ const MobileNav = ({ currentUser }: any) => {
   };
   return (
     <div
-      className="flex justify-center items-center md:hidden max-md:static mr-4 relative z-50"
+      className="flex justify-center items-center md:hidden max-md:static mr-4"
       onClick={() => setIsOpen((prev: any) => !prev)}
     >
       {open ? (
@@ -34,7 +34,7 @@ const MobileNav = ({ currentUser }: any) => {
             width={20}
             className="invert rela"
           />
-          <div className="w-[320px] absolute right-0  top-[64px] flex flex-col justify-center items-start max-sm:w-full h-[700px]">
+          <div className="w-[320px] fixed z-50 right-0  top-[64px] flex flex-col justify-center items-start max-sm:w-full h-[700px]">
             <div className="w-[320px] h-[114px] bg-[#1F1E1F] border-t-[0.5px] border-white p-4 max-sm:w-full">
               <div className="flex justify-start items-center gap-10">
                 <div className="text-white text-[12px]">

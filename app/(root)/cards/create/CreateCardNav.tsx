@@ -9,7 +9,7 @@ const CreateCardNav = () => {
   const pathname = usePathname();
   return (
     <div
-      className="h-[64px] w-full z-20 bg-[#2E2E2E] mt-[64px] overflow-x-auto p-5
+      className="h-[64px] w-full z-20 bg-[#2E2E2E] mt-[64px] overflow-x-auto px-5
     border-[gray] border-t-[0.5px] border-b-[1px] fixed flex justify-between items-center gap-5"
     >
       <Image
