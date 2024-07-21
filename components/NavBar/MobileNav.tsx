@@ -72,7 +72,7 @@ const MobileNav = ({ currentUser }: any) => {
                   className="invert"
                 />
               </div>
-              <Link href={"cards/create"}>
+              <Link href={"/cards/create"}>
                 <div className="p-4 h-[68px] border-b-[0.5px] border-[gray] flex justify-start items-center gap-5 w-full">
                   <Image
                     src={"/icons/addcards.svg"}
