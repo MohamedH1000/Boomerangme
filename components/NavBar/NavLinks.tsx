@@ -71,7 +71,12 @@ w-[250px] items-center h-[100%] max-md:hidden"
           </svg>
         </Link>
         {/* Language */}
-        <LanguageDropdown />
+        <LanguageDropdown
+          setOpenLang={setOpenLang}
+          setOpenNot={setOpenNot}
+          openLang={openLang}
+          setOpenProfile={setOpenProfile}
+        />
         {/* profile  */}
         <ProfileDialog
           setOpenLang={setOpenLang}

@@ -16,7 +16,7 @@ const SideBar = ({ currentUser }: any) => {
     <div
       className="fixed md:top-[64px] md:left-0 
     md:min-h-screen md:w-[56px] bg-[#EAEAED] 
-    max-md:bottom-0 max-md:w-full"
+    max-md:bottom-0 max-md:w-full z-10"
     >
       <div
         className="flex md:justify-start gap-2 

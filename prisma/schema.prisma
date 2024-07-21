@@ -29,7 +29,7 @@ model User {
   role String?
 
   accounts Account[]
-  reservations Reservation[]
+  cards Cards[]
 }
 
 model Account {
@@ -51,14 +51,42 @@ model Account {
   @@unique([provider, providerAccountId])
 }
 
-model Reservation {
+model Cards {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   userId String @db.ObjectId
-  listingId String @db.ObjectId
-  startDate DateTime
-  endDate DateTime
-  totalPrice Int
+  cardType String
+  cardEndDate DateTime
+  stampLife DateTime
+  location String?
+  language String?
+  dateFormat String?
+  purchaseAmount Boolean?
+  privacyPolicy Boolean?
+  numOfCards Int?
+  numOfStamps Int?
+  analytics String?
+  stampCount Int
+  activeStamp String
+  inActiveStamp String
+  logo String?
+  icon String?
+  backgroundUnderStamps String?
+  cardBackGround String
+  stampBackGround String
+  activeStampColor String
+  backgroundUnderStampsColor String
+  cardTextColor String
+  cardOutlineColor String
+  inActiveStampColor String
+  barCodeType String
+  cardDescription String
+  howEarnStamp String
+  companyName String
+  rewardDetails String
+  earnStampMessage String
+  earnRewardMessage String
+  reedemReward Boolean
+  multiRewards String
   createdAt DateTime @default(now())
-
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
