@@ -9,7 +9,7 @@ const CreateCardNav = () => {
   const pathname = usePathname();
   return (
     <div
-      className="h-[64px] w-full z-20 bg-[#2E2E2E] mt-[64px] overflow-x-auto px-5
+      className="h-[64px] w-full z-0 bg-[#2E2E2E] mt-[64px] overflow-x-auto px-5 pl-20 max-md:pl-5
     border-[gray] border-t-[0.5px] border-b-[1px] fixed flex justify-between items-center gap-5"
     >
       <Image
@@ -21,7 +21,7 @@ const CreateCardNav = () => {
       />
       <Input
         placeholder="Card name"
-        className=" bg-[#1f1e1f] border-1px border-[#83838a] rounded-md 
+        className=" bg-[#1f1e1f] border-1px border-[#83838a] rounded-md text-white 
         w-[250px] h-[40px] transition duration-300 max-sm:w-[184px] text-[16px]"
         required
       />

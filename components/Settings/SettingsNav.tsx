@@ -10,7 +10,7 @@ const SettingsNav = () => {
   return (
     <div
       className="pr-10 max-sm:pl-5 max-sm:pr-5 
-    pl-20 mt-[64px] h-[64px] fixed z-20 w-full border-t-[0.5px] border-[gray]
+    pl-20 mt-[64px] h-[64px] fixed z-0 w-full border-t-[0.5px] border-[gray]
     bg-[#2E2E2E] overflow-x-auto flex items-center"
     >
       <div className="cursor-pointer">
