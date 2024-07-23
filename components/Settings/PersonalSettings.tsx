@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "../ui/input";
 import {
   Select,
@@ -9,8 +9,24 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "../ui/button";
+import { User } from "@prisma/client";
 
-const PersonalSettings = () => {
+const PersonalSettings = ({ currentUser }: User) => {
+  const [personalData, setPersonalData] = useState({
+    firstName: currentUser?.firstName || "",
+    lastName: currentUser?.lastName || "",
+    company: currentUser?.company || "",
+    email: currentUser?.email || "",
+    phone: currentUser?.phone || "",
+    image: "",
+    language: "",
+    dateFormat: "",
+    password: "",
+    repeatPassword: "",
+    country: "",
+    timeZone: "",
+    currency: "",
+  });
   return (
     <div
       className="  h-auto
@@ -26,15 +42,40 @@ border-[#D5D5DD] border-[1px]"
             <label htmlFor="firstname" className="font-semibold">
               First name
             </label>
-            <Input type="name" name="firstname" required />
+            <Input
+              type="name"
+              name="firstname"
+              required
+              onChange={(e) =>
+                setPersonalData({ ...personalData, firstName: e.target.value })
+              }
+              value={personalData.firstName}
+            />
             <label htmlFor="lastname" className="font-semibold">
               Last name
             </label>
-            <Input type="name" name="lastname" required />
+            <Input
+              type="name"
+              name="lastname"
+              required
+              value={personalData.lastName}
+              onChange={(e) =>
+                setPersonalData({ ...personalData, lastName: e.target.value })
+              }
+            />
             <label htmlFor="dateformat" className="font-semibold">
               Date format
             </label>
-            <Select name="dateformat">
+            <Select
+              name="dateformat"
+              value={personalData.dateFormat}
+              onValueChange={(value) =>
+                setPersonalData((prev) => ({
+                  ...prev,
+                  dateFormat: value,
+                }))
+              }
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Date format" />
               </SelectTrigger>
@@ -62,7 +103,16 @@ border-[#D5D5DD] border-[1px]"
             <label htmlFor="country" className="font-semibold">
               Country
             </label>
-            <Select name="country">
+            <Select
+              name="country"
+              value={personalData.country}
+              onValueChange={(value) =>
+                setPersonalData((prev) => ({
+                  ...prev,
+                  country: value,
+                }))
+              }
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Country" />
               </SelectTrigger>
@@ -75,7 +125,16 @@ border-[#D5D5DD] border-[1px]"
             <label htmlFor="language" className="font-semibold">
               Language
             </label>
-            <Select name="language">
+            <Select
+              name="language"
+              value={personalData.language}
+              onValueChange={(value) =>
+                setPersonalData((prev) => ({
+                  ...prev,
+                  language: value,
+                }))
+              }
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Language" />
               </SelectTrigger>
@@ -91,7 +150,16 @@ border-[#D5D5DD] border-[1px]"
             <label htmlFor="timezone" className="font-semibold">
               Timezone
             </label>
-            <Select name="timezone">
+            <Select
+              name="timezone"
+              value={personalData.timeZone}
+              onValueChange={(value) =>
+                setPersonalData((prev) => ({
+                  ...prev,
+                  timeZone: value,
+                }))
+              }
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Timezone" />
               </SelectTrigger>
@@ -104,7 +172,16 @@ border-[#D5D5DD] border-[1px]"
             <label htmlFor="currency" className="font-semibold">
               Currency
             </label>
-            <Select name="currency">
+            <Select
+              name="currency"
+              value={personalData.currency}
+              onValueChange={(value) =>
+                setPersonalData((prev) => ({
+                  ...prev,
+                  currency: value,
+                }))
+              }
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Currency" />
               </SelectTrigger>
@@ -122,23 +199,60 @@ border-[#D5D5DD] border-[1px]"
             <label htmlFor="companyname" className="font-semibold">
               Company name
             </label>
-            <Input type="name" name="companyname" />
+            <Input
+              type="name"
+              name="companyname"
+              value={personalData.company}
+              onChange={(e) =>
+                setPersonalData({ ...personalData, company: e.target.value })
+              }
+            />
             <label htmlFor="email" className="font-semibold">
               Email
             </label>
-            <Input type="email" name="email" required />
+            <Input
+              type="email"
+              name="email"
+              required
+              value={personalData.email}
+              onChange={(e) =>
+                setPersonalData({ ...personalData, email: e.target.value })
+              }
+            />
             <label htmlFor="phone" className="font-semibold">
               Phone
             </label>
-            <Input type="number" name="phone" />
+            <Input
+              type="number"
+              name="phone"
+              value={personalData.phone}
+              onChange={(e) =>
+                setPersonalData({ ...personalData, phone: e.target.value })
+              }
+            />
             <label htmlFor="password" className="font-semibold">
               Password
             </label>
-            <Input type="password" name="password" />
+            <Input
+              type="password"
+              name="password"
+              onChange={(e) =>
+                setPersonalData({ ...personalData, password: e.target.value })
+              }
+            />
             <label htmlFor="repeatpassword" className="font-semibold">
               Repeat Password
             </label>
-            <Input type="password" name="repeatpassword" />
+            <Input
+              type="password"
+              name="repeatpassword"
+              onChange={(e) =>
+                setPersonalData({
+                  ...personalData,
+                  repeatPassword: e.target.value,
+                })
+              }
+            />
           </div>
         </div>
         <Button

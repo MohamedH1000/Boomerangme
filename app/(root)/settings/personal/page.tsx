@@ -1,8 +1,11 @@
 import DeleteUser from "@/components/Settings/DeleteUser";
 import PersonalSettings from "@/components/Settings/PersonalSettings";
+import { getCurrentUser } from "@/lib/action/user.action";
 import React from "react";
 
-const page = () => {
+const page = async () => {
+  const currentUser = await getCurrentUser();
+  console.log(currentUser);
   return (
     <div className="pl-20 mt-[175px] w-full bg-[#F7F7F8] pr-5 max-sm:pl-5 mb-20 max-md:pl-5">
       <h1 className="text-[20px] font-medium">Personal Settings</h1>
@@ -25,12 +28,18 @@ const page = () => {
             </div>
           </div>
           <div className="mt-5 flex flex-col justify-center items-center">
-            <h1 className="text-[30px] max-md:text-[20px]">Mohamed Hesham</h1>
-            <p className="text-[13px]">Mohammedhesham115@gmail.com</p>
+            <h1 className="text-[30px] max-md:text-[20px]">
+              {currentUser?.firstName.charAt(0).toUpperCase() +
+                currentUser?.firstName.slice(1) +
+                " " +
+                currentUser?.lastName.charAt(0).toUpperCase() +
+                currentUser?.lastName.slice(1)}
+            </h1>
+            <p className="text-[13px]">{currentUser?.email}</p>
           </div>
         </div>
         <div className="flex flex-col w-[66%] gap-5 max-sm:w-[100%]">
-          <PersonalSettings />
+          <PersonalSettings currentUser={currentUser} />
           <DeleteUser />
         </div>
       </div>
