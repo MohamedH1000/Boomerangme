@@ -9,9 +9,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "../ui/button";
-import { User } from "@prisma/client";
+import { editUser } from "@/lib/action/user.action";
+import { usePathname } from "next/navigation";
+import { useToast } from "../ui/use-toast";
 
-const PersonalSettings = ({ currentUser }: User) => {
+const PersonalSettings = ({ currentUser }: any) => {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [personalData, setPersonalData] = useState({
     firstName: currentUser?.firstName || "",
     lastName: currentUser?.lastName || "",
@@ -27,13 +31,32 @@ const PersonalSettings = ({ currentUser }: User) => {
     timeZone: "",
     currency: "",
   });
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      await editUser(personalData);
+      toast({
+        title: "User Edited Successfully",
+        className: "bg-white",
+      });
+    } catch (error) {
+      console.log(error);
+      toast({
+        title: "Error occur during the edit of user",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <div
       className="  h-auto
 items-center justify-center gap-5 bg-[#FFFFFF] rounded-md
 border-[#D5D5DD] border-[1px]"
     >
-      <form action="" className="p-4 w-full ">
+      <form action="" className="p-4 w-full " onSubmit={handleSubmit}>
         <div className="flex justify-center gap-2 items-start max-md:flex-col">
           <div
             className="flex flex-col w-[49%] items-start
@@ -223,7 +246,7 @@ border-[#D5D5DD] border-[1px]"
               Phone
             </label>
             <Input
-              type="number"
+              type="string"
               name="phone"
               value={personalData.phone}
               onChange={(e) =>
@@ -259,8 +282,9 @@ border-[#D5D5DD] border-[1px]"
           className="bg-[#2e2e2e] text-white rounded-md 
         hover:opacity-85 duration-300 mt-5 w-[49%] ml-1 max-md:w-full max-md:ml-0"
           type="submit"
+          disabled={isLoading ? true : false}
         >
-          Save
+          {isLoading ? "Loading" : "Save"}
         </Button>
       </form>
     </div>

@@ -5,7 +5,7 @@ import React from "react";
 
 const page = async () => {
   const currentUser = await getCurrentUser();
-  console.log(currentUser);
+  // console.log(currentUser);
   return (
     <div className="pl-20 mt-[175px] w-full bg-[#F7F7F8] pr-5 max-sm:pl-5 mb-20 max-md:pl-5">
       <h1 className="text-[20px] font-medium">Personal Settings</h1>
@@ -29,8 +29,8 @@ const page = async () => {
           </div>
           <div className="mt-5 flex flex-col justify-center items-center">
             <h1 className="text-[30px] max-md:text-[20px]">
-              {currentUser?.firstName.charAt(0).toUpperCase() +
-                currentUser?.firstName.slice(1) +
+              {currentUser?.firstName?.charAt(0).toUpperCase() +
+                currentUser?.firstName?.slice(1) +
                 " " +
                 currentUser?.lastName.charAt(0).toUpperCase() +
                 currentUser?.lastName.slice(1)}
