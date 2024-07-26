@@ -34,8 +34,8 @@ const ProfileDialog = ({
     <div
       className={`${
         openProfile ? "bg-[#2E2E2E]" : "hover:bg-[#2E2E2E]"
-      } duration-300 
-  w-full h-[100%] flex justify-center items-center cursor-pointer relative`}
+      } duration-300 w-full h-[100%] flex justify-center items-center 
+      cursor-pointer relative`}
       onClick={() => {
         setOpenProfile((prev: any) => !prev);
         setOpenLang(false);
